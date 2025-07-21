@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --blue: #022942;
+  --gray: #000020;
+  --white: rgba(255, 255, 255, 0.357);
+  --vwhite: #e0dedefa;
+}
+.main{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--blue);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.container{
+  width: 80vw;
+  height: 600px;
+  background-image: url(natureimage2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  animation: changeImage 5s infinite linear alternate;
+}
+
+.container-form{
+  width: 60vw;
+  height: 85vh;
+  margin: auto;
+  background-color: var(--white);
+  backdrop-filter: blur(10px);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border-radius: 5px;
+}
+form{
+  width: 50vw;
+  font-size: 20px;
+  color: var(--gray);
+
+}
+
+.head{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+form p{
+  text-align: center;
+}
+p{
+  position: relative;
+  clear: both;
+  top: 10px
+}
+
+input{
+  margin: 12px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  transition: background .5s;
+}
+input:focus{
+  outline: none;
+  background-color: var(--vwhite);
+}
+button{
+  width: 40vw;
+  position: relative;
+  left: 10%;
+  top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  margin:  10px 0;
+  border: none;
+  font-size: 20px;
+  background-color: burlywood;
+  transition: background .5s;
+}
+button:focus{
+  background-color: rgba(240, 225, 197);
+}
+@keyframes changeImage{
+  0%{background-image: url(natureimage2.jpg);}
+    25%{background-image: url(natureimage3.jpg);}
+      50%{background-image: url(natureimage4.jpg);}
+        75%{background-image: url(natureimage5.jpg);}
+          100%{background-image: url(natureimage3.jpg);}
+}
